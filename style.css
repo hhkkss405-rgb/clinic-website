@@ -24,11 +24,14 @@ body {
 
 header { text-align: center; }
 .profile-img {
-    width: 130px;
-    height: 130px;
+    width: 200px; /* تم زيادة الحجم من 120 إلى 200 */
+    height: 200px; /* تم زيادة الحجم */
     border-radius: 50%;
-    border: 4px solid var(--primary-color);
     object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin: 0 auto 20px auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 h1 { color: var(--primary-color); font-size: 22px; margin: 10px 0; }
