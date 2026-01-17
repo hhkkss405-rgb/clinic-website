@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>لوحة إدارة الحجوزات | د. عبد الرحمن محمود الزميتي</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>لوحة إدارة الحجوزات</h1>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div id="loginView">
+        <form id="loginForm" class="form">
+          <label>اسم المستخدم</label>
+          <input id="adminUser" type="text" required />
+          <label>كلمة المرور</label>
+          <input id="adminPass" type="password" required />
+          <button type="submit" class="btn btn--primary btn--block">دخول</button>
+          <div id="loginStatus" class="status"></div>
+        </form>
+      </div>
+
+      <div id="adminView" class="hidden">
+        <div class="admin-filters">
+          <button id="refreshBtn" class="btn btn--ghost">تحديث القائمة</button>
+        </div>
+        <div class="table-wrapper">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>المريض</th>
+                <th>العيادة</th>
+                <th>التاريخ</th>
+                <th>الفترة</th>
+              </tr>
+            </thead>
+            <tbody id="bookingsTbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="admin.js"></script>
+</body>
+</html>
