@@ -3,48 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حجز موعد | د. عبد الرحمن محمود الزميتي</title>
+    <title>د. عبد الرحمن محمود الزميتي | جراحة المسالك البولية</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <img src="doctor.jpg" alt="د. عبد الرحمن محمود الزميتي" class="profile-img">
-            <h1>حجز موعد جديد</h1>
-            <p>د. عبد الرحمن محمود الزميتي</p>
+            <h1>د. عبد الرحمن محمود الزميتي</h1>
+            <p class="specialty">اخصائي جراحة ومناظير الكلي والمسالك البوليه</p>
+            <p class="vision">"رعاية طبية متطورة.. لحياة صحية أفضل"</p>
         </header>
-        
-        <form id="bookingForm">
-            <div class="row">
-                <label for="name">الاسم بالكامل</label>
-                <input type="text" id="name" required placeholder="أدخل اسمك الثلاثي">
-            </div>
 
-            <div class="row">
-                <label for="phone">رقم الموبايل</label>
-                <input type="tel" id="phone" required placeholder="01xxxxxxxxx">
-            </div>
+        <div class="quick-links">
+            <a href="https://www.facebook.com/profile.php?id=100088683048501" target="_blank" class="btn-link fb">صفحة الفيسبوك</a>
+            <a href="https://wa.me/201095810582" target="_blank" class="btn-link wa">تواصل عبر واتساب</a>
+        </div>
 
-            <div class="row">
-                <label for="clinic">اختر العيادة</label>
+        <section class="about-section">
+            <h3>لماذا يختارنا المرضى؟</h3>
+            <ul>
+                <li>خبرة تخصصية شاملة لجميع الأعمار.</li>
+                <li>تقنيات بدون ألم (مناظير وتفتيت موجات).</li>
+                <li>دقة في تشخيص وعلاج الأورام.</li>
+                <li>بيئة آمنة ومعقمة بأعلى المعايير.</li>
+            </ul>
+        </section>
+
+        <section class="services">
+            <h3>تخصصات العيادة</h3>
+            <div class="service-tag">علاج الحصوات بالمناظير</div>
+            <div class="service-tag">جراحات البروستاتا</div>
+            <div class="service-tag">مسالك بولية للأطفال</div>
+            <div class="service-tag">صحة الرجل والعقم</div>
+            <div class="service-tag">السلس البولي للنساء</div>
+        </section>
+
+        <section class="clinics-info">
+            <div class="clinic-card">
+                <h4>عيادة دمياط الجديدة</h4>
+                <p>📍 بجوار المركز الإسلامي - أعلى صيدلية موافي</p>
+                <p>⏰ 4 - 5 مساءً | 10 - 12 مساءً (سبت - خميس)</p>
+                <p>📞 01010242355</p>
+            </div>
+            <div class="clinic-card">
+                <h4>عيادة الزرقا</h4>
+                <p>📍 كوبري المركز - فوق صيدلية أحمد أسامة</p>
+                <p>⏰ 6 - 9 مساءً (سبت - خميس)</p>
+                <p>📞 01018023019</p>
+            </div>
+        </section>
+
+        <section id="booking-section" class="booking-form">
+            <h3>احجز موعدك الآن</h3>
+            <form id="bookingForm">
+                <input type="text" id="name" placeholder="الاسم بالكامل" required>
+                <input type="tel" id="phone" placeholder="رقم الموبايل" required>
                 <select id="clinic" required>
-                    <option value="" disabled selected>اختر العيادة...</option>
+                    <option value="" disabled selected>اختر العيادة</option>
                     <option value="damietta">عيادة دمياط الجديدة</option>
                     <option value="zarqa">عيادة الزرقا</option>
                 </select>
-            </div>
-
-            <div class="row">
-                <label for="date">التاريخ المطلوب</label>
                 <input type="date" id="date" required>
-            </div>
-
-            <button type="submit" id="submitBtn" class="btn">تأكيد الحجز</button>
-            <div id="status" class="status"></div>
-        </form>
+                <button type="submit" id="submitBtn" class="btn-submit">تأكيد الحجز</button>
+                <div id="status" class="status-msg"></div>
+            </form>
+        </section>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
